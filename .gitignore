@@ -1,0 +1,13 @@
+﻿.env
+*.db
+*.db-wal
+*.db-shm
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+dist/
+.vite/
+*_backup*/
+opslens_data_report.html

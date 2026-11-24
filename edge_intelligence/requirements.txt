@@ -1,0 +1,4 @@
+# Full backend: the core set plus vector search for SOPs.
+# Add every new package here. The start scripts install only when this file changes.
+-r requirements-core.txt
+sentence-transformers==6.0.1

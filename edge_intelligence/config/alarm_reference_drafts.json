@@ -1,0 +1,102 @@
+{
+  "note": "Limits from DRAFT SOP-AER-001. Demonstration values, not approved site operating limits, and not from SOP-MAN-000. Kept apart from alarm_reference.json, which holds only page-cited manual values.",
+  "extra_limits": {
+    "SLD-BLOWER-AIR": [
+      {
+        "name": "LOW",
+        "direction": "low",
+        "value": 2000.0,
+        "text": "2,000 Nm³/h low (draft)",
+        "action": "Check blowers (draft SOP-AER-001)",
+        "source_page": 1,
+        "sop_id": "SOP-AER-001"
+      }
+    ]
+  },
+  "definitions": [
+    {
+      "id": "AER-BLOWER-CUR",
+      "parameter": "Blower B-1 motor current",
+      "process_area": "Aeration blowers",
+      "sop_id": "SOP-AER-001",
+      "source_page": 1,
+      "unit": "A",
+      "normal": {
+        "low": 58.0,
+        "high": 66.0,
+        "text": "58 to 66 A"
+      },
+      "limits": [
+        {
+          "name": "OVERLOAD TRIP",
+          "direction": "high",
+          "value": 78.0,
+          "text": "78 A overload trip (draft)",
+          "action": "Identify the cause before any reset",
+          "source_page": 1
+        }
+      ],
+      "alarm_tag_in_pdf": "NOT SPECIFIED",
+      "alarm_type": "Analog current high",
+      "priority": "NOT SPECIFIED",
+      "acknowledgement": "NOT SPECIFIED",
+      "reset_condition": "NOT SPECIFIED",
+      "verification_criteria": [],
+      "interlocks_or_restrictions": [],
+      "draft": true,
+      "opslens_mapping": {
+        "tag": "BLW-201-CUR",
+        "mapping": "direct",
+        "note": "Draft SOP-AER-001 demonstration value.",
+        "tags": [
+          "BLW-201-CUR"
+        ]
+      }
+    },
+    {
+      "id": "AER-BLOWER-PRS",
+      "parameter": "Air header pressure",
+      "process_area": "Aeration blowers",
+      "sop_id": "SOP-AER-001",
+      "source_page": 1,
+      "unit": "mbar",
+      "normal": {
+        "low": 480.0,
+        "high": 560.0,
+        "text": "480 to 560 mbar"
+      },
+      "limits": [
+        {
+          "name": "LOW",
+          "direction": "low",
+          "value": 380.0,
+          "text": "380 mbar low (draft)",
+          "action": "Check blowers and header valves",
+          "source_page": 1
+        }
+      ],
+      "alarm_tag_in_pdf": "NOT SPECIFIED",
+      "alarm_type": "Analog pressure low",
+      "priority": "NOT SPECIFIED",
+      "acknowledgement": "NOT SPECIFIED",
+      "reset_condition": "NOT SPECIFIED",
+      "verification_criteria": [
+        "Header pressure is back within 480 to 560 mbar."
+      ],
+      "interlocks_or_restrictions": [],
+      "draft": true,
+      "opslens_mapping": {
+        "tag": "BLW-201-PRS",
+        "mapping": "direct",
+        "note": "Draft SOP-AER-001 demonstration value.",
+        "tags": [
+          "BLW-201-PRS"
+        ],
+        "alarm_tag": "ALM-BLW-201-PRS-LO",
+        "alarm_tags": [
+          "ALM-BLW-201-PRS-LO"
+        ]
+      }
+    }
+  ]
+}
